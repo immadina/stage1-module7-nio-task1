@@ -30,7 +30,7 @@ public class FileReader {
                 buffer.clear();
             }
             String st = stringBuilder.toString();
-            st = st.replaceAll(" ", "").replaceAll("(\\r|\\n)", ":");
+            st = st.replace(" ", "").replace("\r", ":").replace("\n", ":");
             String[] sa = st.split(":");
 
             for (int i = 0; i < sa.length; i++) {
